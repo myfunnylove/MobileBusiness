@@ -44,6 +44,7 @@ public class ChooseActivity extends BaseActivity implements ChooseConnector{
     public void onFragmentClick(String which) {
 
         showFragment(which);
+
     }
 
     private void showFragment(String tag){

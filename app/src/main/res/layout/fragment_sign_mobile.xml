@@ -4,54 +4,92 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/phoneLay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/phoneNumber"
-        android:layout_margin="16dp"
-        >
 
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/phone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:maxLength="9"
-            android:inputType="number"
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       >
+       <LinearLayout
+           android:id="@+id/phoneContainer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_margin="16dp"
 
-            />
+           >
+           <android.support.v7.widget.AppCompatImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:srcCompat="@drawable/icon_phone"
+               />
+           <android.support.design.widget.TextInputLayout
+               android:id="@+id/phoneLay"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/phoneNumber"
+               android:orientation="horizontal"
+               android:layout_marginLeft="16dp"
+               >
 
-    </android.support.design.widget.TextInputLayout>
+               <android.support.v7.widget.AppCompatEditText
+                   android:id="@+id/phone"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
 
-    <android.support.design.widget.TextInputLayout
-        android:id="@+id/smsLay"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:layout_below="@+id/phoneLay"
-        >
+                   android:maxLines="1"
+                   android:maxLength="9"
+                   android:inputType="number"
 
-        <android.support.v7.widget.AppCompatEditText
-            android:id="@+id/sms"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:maxLines="1"
-            android:maxLength="6"
-            android:inputType="number"
-            android:hint="@string/sms"
-            android:enabled="false"
-            />
+                   />
+           </android.support.design.widget.TextInputLayout>
+       </LinearLayout>
 
-    </android.support.design.widget.TextInputLayout>
-    <Button
-        android:id="@+id/signIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        style="@style/MobileAccentButton"
-        android:text="@string/signIn"
-        android:layout_below="@+id/smsLay"
+       <LinearLayout
+           android:id="@+id/smsContainer"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_margin="16dp"
+           android:layout_below="@+id/phoneContainer"
+           >
+           <android.support.v7.widget.AppCompatImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               app:srcCompat="@drawable/icon_email"
+               />
+           <android.support.design.widget.TextInputLayout
+               android:id="@+id/smsLay"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/sms"
+               android:orientation="horizontal"
+               android:layout_marginLeft="16dp"
+               >
 
-        />
+               <android.support.v7.widget.AppCompatEditText
+                   android:id="@+id/sms"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+
+                   android:maxLines="1"
+                   android:maxLength="5"
+                   android:inputType="number"
+
+                   />
+           </android.support.design.widget.TextInputLayout>
+       </LinearLayout>
+       <Button
+           android:id="@+id/signIn"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_margin="16dp"
+           style="@style/MobileAccentButton"
+           android:text="@string/signIn"
+           android:layout_below="@+id/smsContainer"
+
+           />
+   </RelativeLayout>
 </RelativeLayout>

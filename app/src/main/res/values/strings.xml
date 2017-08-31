@@ -4,6 +4,6 @@
     <string name="business">Business</string>
     <string name="always_check">Always check</string>
     <string name="phoneNumber">Phone number</string>
-    <string name="sms">Sms</string>
+    <string name="sms">SMS</string>
     <string name="signIn">Sign In</string>
 </resources>
