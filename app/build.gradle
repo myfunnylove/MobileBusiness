@@ -1,0 +1,92 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'realm-android'
+apply plugin: 'android-apt'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        applicationId "com.nbu.mobile"
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dexOptions {
+        jumboMode true
+    }
+    packagingOptions{
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+def support = '26.0.0-alpha1'
+def retrofit = '2.3.0'
+def dagger = '2.11'
+def butterKnife = '8.8.1'
+def moxy = '1.5.3'
+def glide = '4.0.0'
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+
+    /*ANDROID SDK LIBRARIES*/
+    compile "com.android.support:appcompat-v7:$support"
+    compile "com.android.support:design:$support"
+    compile "com.android.support:cardview-v7:$support"
+    compile "com.android.support:recyclerview-v7:$support"
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile "com.android.support:support-v4:$support"
+
+
+
+    /*ANDROID RESTful Services Libraries*/
+    compile "com.squareup.retrofit2:retrofit:$retrofit"
+    compile "com.squareup.retrofit2:converter-gson:$retrofit"
+    compile "com.squareup.retrofit2:adapter-rxjava:$retrofit"
+    compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0@aar'
+    compile 'com.google.code.gson:gson:2.8.1'
+
+
+    /*ADNROID TECHNOLOGIES REACTIVEX*/
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.3'
+
+    /*IMAGE LOADER*/
+    compile "com.github.bumptech.glide:glide:$glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$glide"
+
+    /*BINDING*/
+    compile "com.jakewharton:butterknife:$butterKnife"
+    apt "com.jakewharton:butterknife-compiler:$butterKnife"
+
+    /*CLEAN ARCHITECTURE*/
+    //https://habrahabr.ru/post/276189/
+    compile 'com.arello-mobile:moxy:1.5.3'
+    compile 'com.arello-mobile:moxy-app-compat:1.5.3'
+    annotationProcessor 'com.arello-mobile:moxy-compiler:1.5.3'
+
+    /*ANDROID UTILS*/
+    compile 'com.blankj:utilcode:1.8.5'
+    compile 'uk.co.chrisjenx:calligraphy:2.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    /*DAGGER 2.11*/
+    apt "com.google.dagger:dagger-compiler:$dagger"
+    compile "com.google.dagger:dagger:$dagger"
+    provided "org.glassfish:javax.annotation:10.0-b28"
+}
