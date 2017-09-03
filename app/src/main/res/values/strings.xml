@@ -6,4 +6,7 @@
     <string name="phoneNumber">Phone number</string>
     <string name="sms">SMS</string>
     <string name="signIn">Sign In</string>
+    <string name="top_payments">Top Payments</string>
+    <string name="last_added">Last added</string>
+    <string name="news">News</string>
 </resources>

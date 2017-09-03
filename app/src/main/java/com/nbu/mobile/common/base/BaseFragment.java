@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.nbu.mobile.common.utils.LOGGER;
+
 import butterknife.ButterKnife;
 
 /**
@@ -22,6 +24,7 @@ public abstract class BaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView = inflater.inflate(getViewLayout(),container,false);
         ButterKnife.bind(this,rootView);
+
         initialize();
         return rootView;
     }

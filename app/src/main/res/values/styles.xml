@@ -51,7 +51,7 @@
         <item name="android:textColor">@color/hColor</item>
     </style>
     <style name="pText">
-        <item name="fontPath">fonts/bold.ttf</item>
+        <item name="fontPath">fonts/regular.ttf</item>
         <item name="android:textSize">17sp</item>
         <item name="android:textColor">@color/pColor</item>
     </style>

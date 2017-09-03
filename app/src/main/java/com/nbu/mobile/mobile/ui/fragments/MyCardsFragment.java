@@ -1,5 +1,6 @@
 package com.nbu.mobile.mobile.ui.fragments;
 
+import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseFragment;
 
 /**
@@ -9,7 +10,7 @@ import com.nbu.mobile.common.base.BaseFragment;
 public class MyCardsFragment extends BaseFragment {
     @Override
     protected int getViewLayout() {
-        return 0;
+        return R.layout.fragment_my_cards;
     }
 
     @Override

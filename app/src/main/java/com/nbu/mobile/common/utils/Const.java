@@ -8,4 +8,8 @@ public class Const {
 
     public static final String BASE_URL = "http://github.com/";
     public static final int CACHE_MAX_SIZE = 10*10*1000;
+
+
+
+
 }

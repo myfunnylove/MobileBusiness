@@ -7,6 +7,7 @@ import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseFragment;
 import com.nbu.mobile.common.interfaces.ChooseConnector;
 import com.nbu.mobile.common.ui.fragments.ChooseFragment;
+import com.nbu.mobile.mobile.ui.activities.MainMenuActivity;
 
 import butterknife.OnClick;
 
@@ -18,6 +19,8 @@ public class SignMobileFragment extends BaseFragment {
 
     public static final String TAG = "SignMobileFragment";
     private ChooseConnector chooseConnector;
+
+
 
     @Override
     protected int getViewLayout() {
@@ -31,7 +34,7 @@ public class SignMobileFragment extends BaseFragment {
 
     @OnClick(R.id.signIn)
     void signIn(View view){
-//        chooseConnector.onFragmentClick(SignMobileFragment);
+        chooseConnector.onFragmentClick(MainMenuActivity.TAG);
     }
 
     private static SignMobileFragment mInstance;
