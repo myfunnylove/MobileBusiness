@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:paddingTop="16dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="16dp"
+
+        >
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/accountLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/style_circle_grey"
+            />
+        <Button
+            android:id="@+id/signOff"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:background="#20000000"
+            android:text="@string/sign_off"
+            android:textSize="15sp"
+            android:textColor="#30000000"
+            />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/HTextStyle"
+        android:text="adasdsad"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:layout_gravity="bottom"
+        />
+</LinearLayout>

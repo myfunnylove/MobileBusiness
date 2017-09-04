@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main"
+        android:title="@string/main"
+        android:icon="@drawable/icon_home"
+        android:orderInCategory="1"
+        />
+    <item
+        android:id="@+id/pay"
+
+        android:title="@string/pay"
+        android:icon="@drawable/icon_pay"
+        android:orderInCategory="2"
+        />
+    <item
+        android:id="@+id/report"
+
+        android:title="@string/report"
+        android:icon="@drawable/icon_report"
+        android:orderInCategory="3"
+        />
+    <item
+        android:id="@+id/other"
+
+        android:title="@string/other"
+        android:icon="@drawable/icon_settings"
+        android:orderInCategory="4"
+        />
+</menu>

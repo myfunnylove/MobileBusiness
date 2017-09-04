@@ -6,7 +6,22 @@
     <string name="phoneNumber">Phone number</string>
     <string name="sms">SMS</string>
     <string name="signIn">Sign In</string>
-    <string name="top_payments">Top Payments</string>
+    <string name="top_payments">Top payments</string>
     <string name="last_added">Last added</string>
     <string name="news">News</string>
+    <string name="see_all">See all</string>
+    <string name="get_sms">Get SMS</string>
+    <string name="balance">Balance</string>
+    <string name="card_data">Card data</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="notification">Notification</string>
+    <string name="sign_off">Sign OFF</string>
+    <string name="main">Main</string>
+    <string name="pay">Pay</string>
+    <string name="report">Report</string>
+    <string name="other">Other</string>
+    <string name="my_cards">My cards</string>
+    <string name="analize">Analize</string>
+    <string name="transfer">Transfer</string>
 </resources>

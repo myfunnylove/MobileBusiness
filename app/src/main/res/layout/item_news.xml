@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:layout_marginTop="1dp"
+    android:orientation="horizontal"
+    android:paddingTop="8dp"
+    >
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/style_circle_grey"
+        android:padding="16dp"
+        app:srcCompat="@drawable/icon_news" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="6dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingRight="16dp"
+            android:text="Header title"
+            android:textColor="@color/material_grey_600"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/PTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:paddingRight="16dp"
+            android:textSize="15sp"
+            android:text="description asda sda sdas das d\n asdasdasdasdasdasd"
+
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="6dp"
+            android:background="@color/material_blue_grey_50"
+            android:paddingBottom="8dp"
+
+            />
+    </LinearLayout>
+</LinearLayout>

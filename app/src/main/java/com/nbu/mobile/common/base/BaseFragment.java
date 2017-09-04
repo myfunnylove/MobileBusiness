@@ -31,4 +31,6 @@ public abstract class BaseFragment extends Fragment {
 
     protected abstract int getViewLayout();
     protected abstract void initialize();
+
+    public abstract String getTitle();
 }

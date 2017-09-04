@@ -1,43 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
     android:background="@color/colorPrimary"
-    >
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
-        android:gravity="center"
-        android:textColor="#70ffffff"
+    android:orientation="vertical">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
         android:text="@string/balance"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/HTextStyle"
-        android:textSize="32sp"
-        android:textColor="@color/white"
-        android:text="1 000 000 sum"
-        android:gravity="center"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="16sp"
         android:textColor="#70ffffff"
-        android:gravity="center"
-        android:text="@string/card_data"
+        android:textSize="16sp"
+
         />
+
+    <TextView
+        android:id="@+id/balance"
+        style="@style/HTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 000 000 sum"
+        android:textColor="@color/white"
+        android:paddingLeft="16dp"
+
+        android:textSize="32sp" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/HTextStyle"
+        android:paddingLeft="16dp"
+        android:text="@string/card_data"
+        android:textColor="#70ffffff"
         android:textSize="16sp"
-        android:textColor="@color/white"
-        android:text="8600 00** **** **33 11/19"
-        android:gravity="center"
+
         />
+
+    <TextView
+        android:id="@+id/cardData"
+        style="@style/HTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="8600 00** **** **33 11/19"
+        android:textColor="@color/white"
+        android:paddingLeft="16dp"
+
+        android:textSize="16sp" />
 </LinearLayout>

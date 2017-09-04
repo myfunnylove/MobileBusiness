@@ -1,6 +1,7 @@
 package com.nbu.mobile.mobile.ui.fragments;
 
 
+import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseFragment;
 
 /**
@@ -16,5 +17,9 @@ public class OtherFragment extends BaseFragment {
     @Override
     protected void initialize() {
 
+    }
+    @Override
+    public String getTitle() {
+        return getActivity().getString(R.string.app_name);
     }
 }

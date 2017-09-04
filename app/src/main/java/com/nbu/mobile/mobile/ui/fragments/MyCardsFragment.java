@@ -17,4 +17,8 @@ public class MyCardsFragment extends BaseFragment {
     protected void initialize() {
 
     }
+    @Override
+    public String getTitle() {
+        return getActivity().getString(R.string.app_name);
+    }
 }

@@ -61,4 +61,10 @@ public class ChooseFragment extends BaseFragment {
     public void setOnChooseConnector(ChooseConnector chooseConnector){
         this.chooseConnector = chooseConnector;
     }
+
+    @Override
+    public String getTitle() {
+        return getActivity().getString(R.string.app_name);
+    }
+
 }

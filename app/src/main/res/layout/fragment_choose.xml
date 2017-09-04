@@ -1,37 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_weight="1"
+    android:background="@color/colorPrimary"
     android:gravity="center"
-    >
+    android:orientation="vertical">
 
-    <Button
+
+    <android.support.v7.widget.AppCompatButton
         android:id="@+id/chooseMobile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/mobile"
-        style="@style/MobileAccentButton"
-        android:layout_margin="16dp"
-        />
-    <Button
-        android:id="@+id/chooseBusiness"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/business"
-        style="@style/BusinessAccentButton"
-        android:layout_margin="16dp"
 
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mobile"
+        android:theme="@style/WhiteButton"
+
+        />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/chooseBusiness"
+
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/business"
+        android:theme="@style/WhiteButton"
+
+        android:layout_marginTop="6dp"
         />
 
     <android.support.v7.widget.AppCompatCheckBox
         android:id="@+id/alwaysCheck"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/always_check"
-        android:layout_marginTop="16dp"
-        style="@style/pText"
+        android:textColor="@color/white"
+        android:layout_marginTop="6dp"
+
         />
+
+
 </LinearLayout>

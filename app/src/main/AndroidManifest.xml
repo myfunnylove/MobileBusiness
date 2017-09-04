@@ -21,7 +21,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".common.ui.activities.ChooseActivity"/>
+        <activity android:name=".common.ui.activities.ChooseActivity"
+            android:windowSoftInputMode="adjustResize"
+            />
         <activity android:name=".mobile.ui.activities.MainMenuActivity"/>
     </application>
 
