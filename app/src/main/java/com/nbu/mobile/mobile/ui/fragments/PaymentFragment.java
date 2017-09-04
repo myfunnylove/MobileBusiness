@@ -8,6 +8,8 @@ import com.nbu.mobile.common.base.BaseFragment;
  */
 
 public class PaymentFragment extends BaseFragment {
+    public static final String TAG = "PaymentFragment";
+
     @Override
     protected int getViewLayout() {
         return 0;

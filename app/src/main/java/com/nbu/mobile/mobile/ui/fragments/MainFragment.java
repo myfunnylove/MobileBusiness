@@ -3,13 +3,12 @@ package com.nbu.mobile.mobile.ui.fragments;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseFragment;
-import com.nbu.mobile.common.interfaces.ChooseConnector;
-import com.nbu.mobile.common.ui.fragments.ChooseFragment;
+import com.nbu.mobile.common.interfaces.FragmentConnector;
 import com.nbu.mobile.common.utils.Demo;
-import com.nbu.mobile.common.utils.LOGGER;
 import com.nbu.mobile.mobile.adapters.LastPaymentAdapter;
 import com.nbu.mobile.mobile.adapters.NewsAdapter;
 import com.nbu.mobile.mobile.models.UniversalPartners;
@@ -17,6 +16,7 @@ import com.nbu.mobile.mobile.models.UniversalPartners;
 import java.util.ArrayList;
 
 import butterknife.BindView;
+import butterknife.OnClick;
 
 /**
  * Created by Sarvar on 31.08.2017.
@@ -34,6 +34,9 @@ public class MainFragment extends BaseFragment {
 
     @BindView(R.id.newsView)
     RecyclerView newsView;
+
+    private FragmentConnector chooseConnector;
+
     @Override
     protected int getViewLayout() {
         return R.layout.fragment_main;
@@ -73,9 +76,6 @@ public class MainFragment extends BaseFragment {
         return mInstance;
     }
 
-//    public void setOnChooseConnector(ChooseConnector chooseConnector){
-//        this.chooseConnector = chooseConnector;
-//    }
 
     public void setTopPayments(ArrayList<UniversalPartners> payments){
 //        listTopPayments.setLayoutManager(new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,true));
@@ -93,4 +93,11 @@ public class MainFragment extends BaseFragment {
     public void onResume() {
         super.onResume();
     }
+
+    public void setOnChooseConnector(FragmentConnector chooseConnector){
+        this.chooseConnector = chooseConnector;
+    }
+
+
+
 }

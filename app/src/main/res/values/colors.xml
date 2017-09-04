@@ -9,7 +9,9 @@
 
     <color name="hText">@color/material_grey_600</color>
     <color name="pText">@color/material_grey_400</color>
-
+    <color name="successC">@color/material_green_accent_700</color>
+    <color name="errorC">@color/material_red_accent_400</color>
+    <color name="waitingC">@color/material_amber_accent_700</color>
     <color name="turquoise">#1abc9c</color>
     <color name="greenSea">#16a085</color>
     <color name="emerald">#2ecc71</color>
@@ -32,14 +34,6 @@
     <color name="asbestosdark">#858585</color>
     <color name="black_semi_transparent">#B2000000</color>
 
-    <!--COLOR PALETTE-->
-    <color name="palette1.1">#00B8A9</color>
-    <color name="palette1.2">#F8F3D4</color>
-    <color name="palette1.3">#F6416C</color>
-    <color name="palette1.4">#FFDE7D</color>
-    <color name="vkColor">#507299</color>
-    <color name="errorColor">#F44336</color>
-    <color name="successColor">#00E676</color>
 
     <color name="transparent80">#80000000</color>
     <color name="transparent20">#20000000</color>

@@ -5,8 +5,7 @@ import android.view.View;
 
 import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseFragment;
-import com.nbu.mobile.common.interfaces.ChooseConnector;
-import com.nbu.mobile.common.ui.fragments.ChooseFragment;
+import com.nbu.mobile.common.interfaces.FragmentConnector;
 import com.nbu.mobile.mobile.ui.activities.MainMenuActivity;
 
 import butterknife.OnClick;
@@ -18,7 +17,7 @@ import butterknife.OnClick;
 public class SignMobileFragment extends BaseFragment {
 
     public static final String TAG = "SignMobileFragment";
-    private ChooseConnector chooseConnector;
+    private FragmentConnector chooseConnector;
 
 
 
@@ -51,7 +50,7 @@ public class SignMobileFragment extends BaseFragment {
         return mInstance;
     }
 
-    public void setOnChooseConnector(ChooseConnector chooseConnector){
+    public void setOnChooseConnector(FragmentConnector chooseConnector){
         this.chooseConnector = chooseConnector;
     }
     @Override

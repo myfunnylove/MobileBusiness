@@ -6,18 +6,16 @@ import android.support.v4.app.FragmentTransaction;
 
 import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseActivity;
-import com.nbu.mobile.common.interfaces.ChooseConnector;
+import com.nbu.mobile.common.interfaces.FragmentConnector;
 import com.nbu.mobile.common.ui.fragments.ChooseFragment;
 import com.nbu.mobile.mobile.ui.activities.MainMenuActivity;
 import com.nbu.mobile.mobile.ui.fragments.SignMobileFragment;
-
-import javax.inject.Inject;
 
 /**
  * Created by Sarvar on 31.08.2017.
  */
 
-public class ChooseActivity extends BaseActivity implements ChooseConnector{
+public class ChooseActivity extends BaseActivity implements FragmentConnector {
 
     public static final int MOBILE = 1;
     public static final int BUSINESS = 2;

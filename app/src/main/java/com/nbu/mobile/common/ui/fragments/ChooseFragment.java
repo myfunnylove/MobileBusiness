@@ -7,7 +7,7 @@ import android.widget.Button;
 
 import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseFragment;
-import com.nbu.mobile.common.interfaces.ChooseConnector;
+import com.nbu.mobile.common.interfaces.FragmentConnector;
 import com.nbu.mobile.mobile.ui.fragments.SignMobileFragment;
 
 import butterknife.BindView;
@@ -27,7 +27,7 @@ public class ChooseFragment extends BaseFragment {
     @BindView(R.id.alwaysCheck)
     AppCompatCheckBox alwaysCheck;
 
-    private ChooseConnector chooseConnector;
+    private FragmentConnector chooseConnector;
 
     @Override
     protected int getViewLayout() {
@@ -58,7 +58,7 @@ public class ChooseFragment extends BaseFragment {
         return mInstance;
     }
 
-    public void setOnChooseConnector(ChooseConnector chooseConnector){
+    public void setOnChooseConnector(FragmentConnector chooseConnector){
         this.chooseConnector = chooseConnector;
     }
 

@@ -3,6 +3,7 @@ package com.nbu.mobile.common.utils;
 import com.nbu.mobile.R;
 import com.nbu.mobile.mobile.models.Balance;
 import com.nbu.mobile.mobile.models.News;
+import com.nbu.mobile.mobile.models.Report;
 import com.nbu.mobile.mobile.models.UniversalPartners;
 
 import java.util.ArrayList;
@@ -52,5 +53,16 @@ public class Demo {
 ;
 
     }
+    public static ArrayList<Report> report;
 
+    static {
+        report = new ArrayList<>();
+
+        report.add(new Report(1,12,"Beeline",R.drawable.beeline,"May 10 2016 12:00","5 000 sum",Report.SUCCESS));
+        report.add(new Report(1,12,"UMS",R.drawable.ums,"May 10 2016 12:00","1 000 sum",Report.SUCCESS));
+        report.add(new Report(1,12,"UzMobile",R.drawable.texnomart,"May 10 2016 12:00","50 000 sum",Report.WAITING));
+        report.add(new Report(1,12,"Beeline",R.drawable.beeline,"May 10 2016 12:00","15 000 sum",Report.ERROR));
+        report.add(new Report(1,12,"Perfectum Mobile",R.drawable.perfectum,"May 10 2016 12:00","500 000 sum",Report.SUCCESS));
+        report.add(new Report(1,12,"Texnomart",R.drawable.ucell,"May 10 2016 12:00","500 sum",Report.ERROR));
+    }
 }
