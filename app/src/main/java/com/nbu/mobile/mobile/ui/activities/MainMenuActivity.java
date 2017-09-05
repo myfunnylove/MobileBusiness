@@ -22,6 +22,7 @@ import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.nbu.mobile.R;
 import com.nbu.mobile.common.base.BaseActivity;
@@ -30,9 +31,11 @@ import com.nbu.mobile.common.interfaces.FragmentConnector;
 import com.nbu.mobile.common.utils.Demo;
 import com.nbu.mobile.mobile.adapters.MainPagerAdapter;
 import com.nbu.mobile.mobile.adapters.MyBalanceAdapter;
+import com.nbu.mobile.mobile.adapters.ReportAdapter;
 import com.nbu.mobile.mobile.ui.fragments.MainFragment;
 import com.nbu.mobile.mobile.ui.fragments.PaymentFragment;
 import com.nbu.mobile.mobile.ui.fragments.ReportFragment;
+import com.pixelcan.inkpageindicator.InkPageIndicator;
 
 import java.util.HashMap;
 
@@ -43,11 +46,9 @@ import butterknife.OnClick;
  * Created by Microlab on 31.08.2017.
  */
 
-public class MainMenuActivity extends BaseActivity implements FragmentConnector{
+public class MainMenuActivity extends BaseActivity implements FragmentConnector {
 
     public static final String TAG = "MainMenuActivity";
-
-
 
 
     @BindView(R.id.balancePager)
@@ -63,6 +64,10 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
+    @BindView(R.id.indicator)
+    InkPageIndicator indicator;
+
+
     ActionBarDrawerToggle actionBarDrawerToggle;
 
     FragmentManager manager;
@@ -74,7 +79,8 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
     *
     * */
     MainFragment mainFragment;
-    ReportFragment reportFragment;
+
+
     @Override
     protected int getLayout() {
         return R.layout.activity_main_menu;
@@ -85,10 +91,10 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
         initActionBar();
 
         balancePager.setAdapter(new MyBalanceAdapter(this, Demo.balance));
-
+        indicator.setViewPager(balancePager);
         mainFragment = MainFragment.getInstance();
         mainFragment.setOnChooseConnector(this);
-        reportFragment = ReportFragment.getInstance();
+//        reportFragment = ReportFragment.getInstance();
 
         showFragment(MainFragment.TAG);
     }
@@ -96,30 +102,40 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
     private void showFragment(String tag) {
         manager = getSupportFragmentManager();
         transaction = manager.beginTransaction();
-        switch (tag){
-            case MainFragment.TAG :
+        switch (tag) {
+            case MainFragment.TAG:
+//
+//                if (reportFragment.isAdded() && !reportFragment.isHidden())
+//                    transaction.hide(reportFragment);
 
-                if (reportFragment.isAdded() && !reportFragment.isHidden()) transaction.hide(reportFragment);
-
-                if (mainFragment.isAdded()){
-                    if (mainFragment.isHidden()){
+                if (mainFragment.isAdded()) {
+                    if (mainFragment.isHidden()) {
                         transaction.show(mainFragment);
                     }
-                }else{
-                    transaction.add(R.id.fragmentContainer,mainFragment,MainFragment.TAG);
+                } else {
+                    transaction.add(R.id.fragmentContainer, mainFragment, MainFragment.TAG);
                 }
                 break;
             case ReportFragment.TAG:
 
-                if (mainFragment.isAdded() && !mainFragment.isHidden()) transaction.hide(mainFragment);
 
-                if (reportFragment.isAdded()){
-                    if (reportFragment.isHidden()){
-                        transaction.show(reportFragment);
-                    }
-                }else{
-                    transaction.add(R.id.fragmentContainer,reportFragment,ReportFragment.TAG);
-                }
+                startActivity(new Intent(this, ReportListActivity.class));
+//                if (mainFragment.isAdded() && !mainFragment.isHidden())
+//                    transaction.hide(mainFragment);
+//
+//                if (reportFragment.isAdded()) {
+//                    if (reportFragment.isHidden()) {
+//                        transaction.show(reportFragment);
+//                    }
+//                } else {
+//                    Toast.makeText(this, "test", Toast.LENGTH_SHORT).show();
+//
+//                    transaction.add(R.id.fragmentContainer, reportFragment, ReportFragment.TAG);
+//                }
+                break;
+            case MainListActivity.TAG:
+                startActivity(new Intent(this, MainListActivity.class));
+
                 break;
         }
 
@@ -175,10 +191,7 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
 //        headerPersonId.setTypeface(customFontTypeface);
 
 //            headerPersonName.setText("Demo");
-        }
-
-
-
+    }
 
 
     @Override
@@ -200,9 +213,9 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
         if (drawerLayout.isDrawerOpen(Gravity.LEFT)) {
             drawerLayout.closeDrawer(Gravity.LEFT);
         } else {
-            if (manager.getBackStackEntryCount() == 1){
+            if (manager.getBackStackEntryCount() == 1) {
                 this.finish();
-            }else {
+            } else {
                 super.onBackPressed();
             }
         }
@@ -214,20 +227,20 @@ public class MainMenuActivity extends BaseActivity implements FragmentConnector{
     }
 
 
-    @OnClick({R.id.goAnalize,R.id.goPayment,R.id.goReport,R.id.goTransfer})
-    public void go(View view){
+    @OnClick({R.id.goAnalize, R.id.goPayment, R.id.goReport, R.id.goTransfer})
+    public void go(View view) {
 
-        switch (view.getId()){
-            case R.id.goAnalize :
+        switch (view.getId()) {
+            case R.id.goAnalize:
                 break;
-            case R.id.goPayment :
-                showFragment(PaymentFragment.TAG);
+            case R.id.goPayment:
+                showFragment(MainListActivity.TAG);
                 break;
-            case R.id.goReport :
+            case R.id.goReport:
                 showFragment(ReportFragment.TAG);
 
                 break;
-            case R.id.goTransfer :
+            case R.id.goTransfer:
 
                 break;
 

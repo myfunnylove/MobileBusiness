@@ -89,4 +89,7 @@ dependencies {
     apt "com.google.dagger:dagger-compiler:$dagger"
     compile "com.google.dagger:dagger:$dagger"
     provided "org.glassfish:javax.annotation:10.0-b28"
+
+    compile 'com.pacioianu.david:ink-page-indicator:1.2.0'
+
 }

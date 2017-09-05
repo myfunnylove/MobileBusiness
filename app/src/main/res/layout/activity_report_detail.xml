@@ -12,28 +12,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/PTextStyle"
-        android:text="@string/amount"
-        android:textColor="#40000000"
-        android:paddingLeft="54dp"
+        android:orientation="horizontal"
+         android:layout_marginRight="16dp"
+        >
 
-        android:paddingRight="16dp"
-        android:paddingTop="16dp"
-        />
-    <TextView
-        android:id="@+id/amount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        style="@style/HTextStyle"
-        android:text="1 000 000 sum"
-        android:textColor="@color/white"
-        android:textSize="32sp"
-        android:paddingLeft="54dp"
-        android:paddingBottom="16dp"
-        />
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/icon_payment_primary"
+            android:padding="16dp"
+            android:layout_marginRight="16dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/PTextStyle"
+                android:text="@string/amount"
+                android:textColor="#40000000"
+
+                android:paddingTop="16dp"
+                />
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/SummaStyle"
+                android:text="1 000 000 sum"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:paddingBottom="16dp"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
 </android.support.design.widget.AppBarLayout>
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -51,27 +71,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginRight="16dp"
+
             >
             <android.support.v7.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/icon_payment"
                 android:padding="16dp"
+                android:layout_marginRight="16dp"
+
                 />
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:hint="@string/payee"
                 android:textColorHint="@color/pText"
+
                 >
                 <android.support.v7.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:text="Beeline OOO"
-                    style="@style/HTextStyle"
+                    android:background="@android:color/transparent"
                     android:focusable="false"
                     android:gravity="center_vertical"
                     android:layout_gravity="center"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.50dp"
+                    android:background="@color/pText"
                     />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
@@ -79,12 +110,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginRight="16dp"
+
                 >
                 <android.support.v7.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/icon_account"
                     android:padding="16dp"
+                    android:layout_marginRight="16dp"
                     />
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -95,26 +129,38 @@
 
                     <android.support.v7.widget.AppCompatEditText
                         android:id="@+id/appCompatEditText"
-                        style="@style/HTextStyle"
+                        android:background="@android:color/transparent"
+
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:layout_gravity="center"
-
                         android:focusable="false"
+
                         android:gravity="center_vertical"
                         android:text="+998 90 9787695" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.50dp"
+                        android:background="@color/pText"
+                        />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginRight="16dp"
+
                 >
                 <android.support.v7.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/icon_date_time"
                     android:padding="16dp"
+                    android:layout_marginRight="16dp"
+
                     />
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -125,12 +171,19 @@
                     <android.support.v7.widget.AppCompatEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="May 10 2016 20:00:00"
-                        style="@style/HTextStyle"
+                        android:background="@android:color/transparent"
+
                         android:focusable="false"
 
                         android:gravity="center_vertical"
                         android:layout_gravity="center"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.50dp"
+                        android:background="@color/pText"
                         />
                 </android.support.design.widget.TextInputLayout>
             </LinearLayout>
@@ -138,12 +191,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginRight="16dp"
                 >
                 <android.support.v7.widget.AppCompatImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@drawable/icon_status"
                     android:padding="16dp"
+                    android:layout_marginRight="16dp"
+
                     />
                 <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
@@ -154,12 +210,19 @@
                     <android.support.v7.widget.AppCompatEditText
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:layout_weight="1"
                         android:text="Success"
-                        style="@style/HTextStyle"
+                        android:background="@android:color/transparent"
+
                         android:focusable="false"
 
                         android:gravity="center_vertical"
                         android:layout_gravity="center"
+                        />
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.50dp"
+                        android:background="@color/pText"
                         />
                 </android.support.design.widget.TextInputLayout>
 

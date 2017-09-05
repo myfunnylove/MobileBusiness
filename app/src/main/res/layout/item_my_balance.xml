@@ -11,14 +11,15 @@
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
         android:text="@string/balance"
-        android:textColor="#70ffffff"
+        android:textColor="#40000000"
         android:textSize="16sp"
 
         />
 
     <TextView
         android:id="@+id/balance"
-        style="@style/HTextStyle"
+        style="@style/SummaStyle"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1 000 000 sum"
@@ -32,7 +33,7 @@
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
         android:text="@string/card_data"
-        android:textColor="#70ffffff"
+        android:textColor="#40000000"
         android:textSize="16sp"
 
         />

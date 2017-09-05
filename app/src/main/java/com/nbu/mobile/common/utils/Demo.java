@@ -2,6 +2,7 @@ package com.nbu.mobile.common.utils;
 
 import com.nbu.mobile.R;
 import com.nbu.mobile.mobile.models.Balance;
+import com.nbu.mobile.mobile.models.MainMenuItem;
 import com.nbu.mobile.mobile.models.News;
 import com.nbu.mobile.mobile.models.Report;
 import com.nbu.mobile.mobile.models.UniversalPartners;
@@ -65,4 +66,19 @@ public class Demo {
         report.add(new Report(1,12,"Perfectum Mobile",R.drawable.perfectum,"May 10 2016 12:00","500 000 sum",Report.SUCCESS));
         report.add(new Report(1,12,"Texnomart",R.drawable.ucell,"May 10 2016 12:00","500 sum",Report.ERROR));
     }
+
+
+    public static ArrayList<MainMenuItem> mainMenuItems;
+    static{
+        mainMenuItems = new ArrayList<>();
+        mainMenuItems.add(new MainMenuItem(1,"","Mobile Operators",""));
+        mainMenuItems.add(new MainMenuItem(1,"","Internet Operators",""));
+        mainMenuItems.add(new MainMenuItem(1,"","Taxes",""));
+        mainMenuItems.add(new MainMenuItem(1,"","Insurance",""));
+        mainMenuItems.add(new MainMenuItem(1,"","Web Operators",""));
+        mainMenuItems.add(new MainMenuItem(1,"","XFSDFE",""));
+
+    }
+
+
 }

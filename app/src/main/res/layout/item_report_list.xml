@@ -1,59 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/white"
-    android:layout_marginTop="6dp"
-    android:id="@+id/container"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="0.05dp"
     >
-<ImageView
-    android:id="@+id/logo"
-    android:layout_width="64dp"
-    android:layout_height="64dp"
-    android:src="@drawable/beeline"
-    android:padding="16dp"
-    />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:layout_gravity="center_vertical"
-        >
-        <TextView
-            android:id="@+id/partnerName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/HTextStyle"
-            android:text="Beeline"
-            android:maxLines="1"
-            />
-        <TextView
-            android:id="@+id/dateTime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/PTextStyle"
-            android:text="May 20 2017 20:00:00"
-            android:maxLines="1"
-            android:textSize="15sp"
-            />
-    </LinearLayout>
-    <TextView
-        android:id="@+id/summa"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:textSize="15sp"
-        android:maxLines="1"
-        android:gravity="right"
-        android:text="1000 000 sum"
-        android:paddingRight="16dp"
-        style="@style/HTextStyle"
+        android:background="@drawable/style_gray_when_select"
+        android:layout_marginTop="6dp"
+        android:id="@+id/container">
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/beeline"
+            android:padding="16dp"
+            android:layout_marginRight="10dp"
 
-        android:textColor="@color/successC"
+            />
 
-        />
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            >
+            <TextView
+                android:id="@+id/partnerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/HTextStyle"
+                android:text="Beeline"
+                android:maxLines="1"
+                />
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/PTextStyle"
+                android:text="May 20 2017 20:00:00"
+                android:maxLines="1"
+                android:textSize="15sp"
+                />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/summa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:gravity="right"
+            android:text="1000 000 sum"
+            android:paddingRight="16dp"
+            style="@style/HTextStyle"
+
+            android:textColor="@color/successC"
+
+            />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>

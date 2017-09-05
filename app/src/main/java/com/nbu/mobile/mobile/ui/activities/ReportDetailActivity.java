@@ -17,6 +17,7 @@ public class ReportDetailActivity extends BaseActivity {
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
+
     @Override
     protected int getLayout() {
         return R.layout.activity_report_detail;
@@ -34,4 +35,6 @@ public class ReportDetailActivity extends BaseActivity {
         });
 //        getSupportActionBar().setIcon(R.drawable.close);
     }
+
+
 }

@@ -31,31 +31,20 @@
                 <android.support.v4.view.ViewPager
                     android:id="@+id/balancePager"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-                <LinearLayout
-                    android:layout_width="50dp"
-                    android:layout_height="match_parent"
-                    android:layout_alignParentRight="true"
-                    android:orientation="vertical"
-                    android:gravity="center"
-                    >
-                    <android.support.v7.widget.AppCompatImageView
-                        android:id="@+id/slideLeft"
-                        android:layout_width="44dp"
-                        android:layout_height="44dp"
-                        app:srcCompat="@drawable/icon_arrow_left"
-                        android:padding="10dp"
-                        />
-                    <android.support.v7.widget.AppCompatImageView
-                        android:id="@+id/slideRight"
-                        android:layout_width="44dp"
-                        android:layout_height="44dp"
-                        app:srcCompat="@drawable/icon_arrow_right"
-                        android:padding="10dp"
+                    android:layout_height="wrap_content" />
 
-                        />
-                </LinearLayout>
+                <com.pixelcan.inkpageindicator.InkPageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="6dp"
+                    app:animationDuration="120"
+                    app:currentPageIndicatorColor="#70000000"
+                    app:dotDiameter="8dp"
+                    app:dotGap="8dp"
+                    app:pageIndicatorColor="#20000000" />
+
             </RelativeLayout>
         </android.support.design.widget.AppBarLayout>
 
@@ -63,14 +52,14 @@
         <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior"
             android:fillViewport="true"
-            >
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"
-                >
+                android:orientation="vertical">
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -202,10 +191,11 @@
 
 
                 </LinearLayout>
+
                 <FrameLayout
                     android:id="@+id/fragmentContainer"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent" />
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
 
@@ -215,10 +205,10 @@
             android:layout_height="55dp"
             android:src="@drawable/add"
             app:elevation="6dp"
-            app:useCompatPadding="true"
-            app:rippleColor="@color/colorAccentDark"
             app:layout_anchor="@id/appbar"
-            app:layout_anchorGravity="bottom|right" />
+            app:layout_anchorGravity="bottom|right"
+            app:rippleColor="@color/colorAccentDark"
+            app:useCompatPadding="true" />
     </android.support.design.widget.CoordinatorLayout>
 
     <android.support.design.widget.NavigationView
@@ -227,6 +217,5 @@
         android:layout_height="match_parent"
         android:layout_gravity="left"
         app:headerLayout="@layout/res_nav_header"
-        app:menu="@menu/main_nav_menu"
-        />
+        app:menu="@menu/main_nav_menu" />
 </android.support.v4.widget.DrawerLayout>

@@ -26,6 +26,10 @@
             />
         <activity android:name=".mobile.ui.activities.MainMenuActivity"/>
         <activity android:name=".mobile.ui.activities.ReportDetailActivity"/>
+        <activity android:name=".mobile.ui.activities.ReportListActivity"/>
+        <activity android:name=".mobile.ui.activities.MainListActivity"/>
+        <activity android:name=".mobile.ui.activities.PartnerListActivity"/>
+        <activity android:name=".mobile.ui.activities.ActivityPay" android:windowSoftInputMode="adjustResize"/>
     </application>
 
 </manifest>

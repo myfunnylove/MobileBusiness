@@ -37,4 +37,7 @@
     <string name="account">Account</string>
     <string name="pay_again">Pay again</string>
     <string name="payment">Payment</string>
+    <string name="favorite">Favorite</string>
+    <string name="choosed_card">Choosed card</string>
+    <string name="login">Login</string>
 </resources>
