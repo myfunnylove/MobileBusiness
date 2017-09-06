@@ -39,7 +39,7 @@ public class ActivityPay extends BaseActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        toolbar.setNavigationIcon(R.drawable.icon_arrow_left);
+        toolbar.setNavigationIcon(R.drawable.close);
         toolbar.setNavigationOnClickListener(view -> this.finish());
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
 

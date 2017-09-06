@@ -4,73 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
-<RelativeLayout
+<android.support.v7.widget.RecyclerView
+    android:id="@+id/reportChooseList"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:paddingLeft="8dp"
-    android:paddingRight="8dp"
-    >
-    <TextView
-        android:id="@+id/day20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/_20_day"
-        android:textColor="@color/white"
-        android:background="@drawable/style_report_date_bg_selected"
-        android:paddingTop="6dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="6dp"
-        android:layout_margin="8dp"
-        android:layout_alignParentLeft="true"
-        />
-    <TextView
-        android:id="@+id/week"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/week"
-        android:textColor="@color/white"
-        android:background="@drawable/style_report_date_bg"
-        android:paddingTop="6dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="6dp"
-        android:layout_margin="8dp"
-        android:layout_toRightOf="@+id/day20"
-        />
-
-    <TextView
-        android:id="@+id/month"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/month"
-        android:textColor="@color/white"
-        android:background="@drawable/style_report_date_bg"
-        android:paddingTop="6dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="6dp"
-        android:layout_margin="8dp"
-        android:layout_toRightOf="@+id/week"
-        />
-
-    <TextView
-        android:id="@+id/anotherDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/choose_another_date"
-        android:textColor="@color/white"
-        android:background="@drawable/style_report_date_bg"
-        android:paddingTop="6dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="6dp"
-        android:layout_margin="8dp"
-        android:layout_below="@+id/day20"
-        />
-
-</RelativeLayout>
+    android:layout_marginTop="8dp"
+    />
 
     <LinearLayout
         android:layout_width="match_parent"

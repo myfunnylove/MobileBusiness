@@ -1,6 +1,7 @@
 package com.nbu.mobile.common.utils;
 
 import com.nbu.mobile.R;
+import com.nbu.mobile.common.base.App;
 import com.nbu.mobile.mobile.models.Balance;
 import com.nbu.mobile.mobile.models.MainMenuItem;
 import com.nbu.mobile.mobile.models.News;
@@ -79,6 +80,9 @@ public class Demo {
         mainMenuItems.add(new MainMenuItem(1,"","XFSDFE",""));
 
     }
+    public static ArrayList<String> reportChooseDates;
+
+
 
 
 }

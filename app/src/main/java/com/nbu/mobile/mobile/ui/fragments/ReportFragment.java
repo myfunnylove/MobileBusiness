@@ -6,10 +6,14 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.nbu.mobile.R;
+import com.nbu.mobile.common.base.App;
 import com.nbu.mobile.common.base.BaseFragment;
 import com.nbu.mobile.common.utils.Demo;
 import com.nbu.mobile.mobile.adapters.ReportAdapter;
+import com.nbu.mobile.mobile.adapters.ReportChooseDateAdapter;
 import com.nbu.mobile.mobile.ui.activities.ReportDetailActivity;
+
+import java.util.ArrayList;
 
 import butterknife.BindView;
 
@@ -24,8 +28,11 @@ public class ReportFragment extends BaseFragment {
     @BindView(R.id.list)
     RecyclerView list;
 
-    private ReportAdapter adapter;
+    @BindView(R.id.reportChooseList)
+    RecyclerView reportChooseList;
 
+    private ReportAdapter adapter;
+    private ReportChooseDateAdapter reportChooseDateAdapter;
     @Override
     protected int getViewLayout() {
         return R.layout.fragment_report;
@@ -42,6 +49,19 @@ public class ReportFragment extends BaseFragment {
         });
 
         list.setAdapter(adapter);
+        ArrayList<String> reportChooseDates = new ArrayList<>();
+        reportChooseDates.add(getActivity().getResources().getString(R.string._20_day));
+        reportChooseDates.add(getActivity().getResources().getString(R.string.week));
+        reportChooseDates.add(getActivity().getResources().getString(R.string.month));
+        reportChooseDates.add(getActivity().getResources().getString(R.string.choose_another_date));
+
+        reportChooseList.setLayoutManager(new LinearLayoutManager(getContext(),LinearLayoutManager.HORIZONTAL,false));
+        reportChooseList.setHasFixedSize(true);
+        reportChooseDateAdapter = new ReportChooseDateAdapter(getActivity(), reportChooseDates);
+
+        reportChooseList.setAdapter(reportChooseDateAdapter);
+
+
     }
 
     @Override
