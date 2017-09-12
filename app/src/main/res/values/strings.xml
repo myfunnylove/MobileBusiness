@@ -40,4 +40,5 @@
     <string name="favorite">Favorite</string>
     <string name="choosed_card">Choosed card</string>
     <string name="login">Login</string>
+    <string name="category">Category</string>
 </resources>

@@ -9,7 +9,7 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-        <item name="android:windowBackground">@color/material_grey_200</item>
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:typeface">serif</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
         <item name="actionBarTheme">@style/DrawerArrowStyle</item>

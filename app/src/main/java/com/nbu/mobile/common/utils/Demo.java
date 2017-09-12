@@ -72,12 +72,12 @@ public class Demo {
     public static ArrayList<MainMenuItem> mainMenuItems;
     static{
         mainMenuItems = new ArrayList<>();
-        mainMenuItems.add(new MainMenuItem(1,"","Mobile Operators",""));
-        mainMenuItems.add(new MainMenuItem(1,"","Internet Operators",""));
-        mainMenuItems.add(new MainMenuItem(1,"","Taxes",""));
-        mainMenuItems.add(new MainMenuItem(1,"","Insurance",""));
-        mainMenuItems.add(new MainMenuItem(1,"","Web Operators",""));
-        mainMenuItems.add(new MainMenuItem(1,"","XFSDFE",""));
+        mainMenuItems.add(new MainMenuItem(1,"Mobile Operators",partners));
+        mainMenuItems.add(new MainMenuItem(1,"Internet Operators",partners));
+        mainMenuItems.add(new MainMenuItem(1,"Taxes",partners));
+        mainMenuItems.add(new MainMenuItem(1,"Insurance",partners));
+        mainMenuItems.add(new MainMenuItem(1,"Web Operators",partners));
+        mainMenuItems.add(new MainMenuItem(1,"XFSDFE",partners));
 
     }
     public static ArrayList<String> reportChooseDates;

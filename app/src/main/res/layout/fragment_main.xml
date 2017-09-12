@@ -7,11 +7,8 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.50dp"
-        android:background="#20000000"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="10dp"
+        android:background="@color/material_grey_100"
 
         />
     <LinearLayout
@@ -61,10 +58,8 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.50dp"
-        android:background="#20000000"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_height="10dp"
+        android:background="@color/material_grey_100"
         />
     <LinearLayout
         android:layout_width="match_parent"
@@ -111,7 +106,12 @@
         android:paddingBottom="8dp"
         android:paddingTop="8dp" />
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/material_grey_100"
 
+        />
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

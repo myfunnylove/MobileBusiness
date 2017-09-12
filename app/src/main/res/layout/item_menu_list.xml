@@ -1,44 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="6dp"
-    app:cardElevation="1dp"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/style_gray_when_select"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
-        <android.support.v7.widget.AppCompatImageView
-            android:id="@+id/logo"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            android:layout_marginRight="8dp"
-            android:padding="16dp"
-            android:src="@drawable/beeline"
-            />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginRight="16dp"
-            android:gravity="center_vertical"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/partnerName"
-                style="@style/HTextStyle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:maxLines="1"
-                android:text="Beeline OOO" />
+        <TextView
+            android:id="@+id/categoryName"
+            style="@style/PrimaryTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
 
 
-        </LinearLayout>
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/category"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/seeAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:text="@string/see_all"
+            android:textColor="@color/colorAccent" />
     </LinearLayout>
-</android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp"
+
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/material_grey_100" />
+</LinearLayout>

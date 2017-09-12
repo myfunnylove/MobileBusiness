@@ -57,8 +57,10 @@ public class MainListActivity extends BaseActivity implements MainMenuAdapter.Ma
             list.setAdapter(adapter);
     }
 
+
+
     @Override
-    public void onReportClick(int position) {
-        startActivity(new Intent(this,PartnerListActivity.class));
+    public void onMainListClick(int position) {
+        startActivity(new Intent(this,ActivityPay.class));
     }
 }

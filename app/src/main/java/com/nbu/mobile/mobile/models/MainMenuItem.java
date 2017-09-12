@@ -1,36 +1,34 @@
 package com.nbu.mobile.mobile.models;
 
+import java.util.ArrayList;
+
 /**
  * Created by Sarvar on 05.09.2017.
  */
 
 public class MainMenuItem {
 
-    private int id ;
-    private String logo;
-    private String partnerName;
-    private String secondaryName;
+    private int id;
 
-    public MainMenuItem(int id, String logo, String partnerName, String secondaryName) {
+    private String categoryName;
+
+    private ArrayList<UniversalPartners> partners;
+
+    public MainMenuItem(int id, String categoryName, ArrayList<UniversalPartners> partners) {
         this.id = id;
-        this.logo = logo;
-        this.partnerName = partnerName;
-        this.secondaryName = secondaryName;
+        this.categoryName = categoryName;
+        this.partners = partners;
     }
 
     public int getId() {
         return id;
     }
 
-    public String getLogo() {
-        return logo;
+    public String getCategoryName() {
+        return categoryName;
     }
 
-    public String getPartnerName() {
-        return partnerName;
-    }
-
-    public String getSecondaryName() {
-        return secondaryName;
+    public ArrayList<UniversalPartners> getPartners() {
+        return partners;
     }
 }
